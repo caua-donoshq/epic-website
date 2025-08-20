@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { addEmailToSheet } from "@/lib/google-sheets"
 
 export function WaitlistSignup() {
   const [email, setEmail] = useState("")
@@ -21,7 +20,7 @@ export function WaitlistSignup() {
     formData.append('timestamp', new Date().toISOString())
 
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbzdm9oMvseD_7e2zBwNiExUHvsMSZ9AEoi4z9Sng2xOV_Fs9WoRNtFEHZb8PZnqTHup/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbzdm9oMvseD_7e2zBwNiExUHvsMSZ9AEoi4z9Sng2xOV_Fs9WoRNtFEHZb8PZnqTHup/exec', {
         method: 'POST',
         body: formData,
         mode: 'no-cors' // This bypasses CORS but we won't get the response
