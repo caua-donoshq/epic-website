@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 export function Header() {
@@ -27,25 +26,16 @@ export function Header() {
         }`}>
           <div className="flex items-center justify-between h-12 px-4">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center pb-1">
               <Image 
-                src="/images/epic-new-logo.svg" 
+                src="/images/epic-logo.svg" 
                 alt="Epic" 
-                width={80} 
-                height={28}
-                className="h-6 w-auto"
+                width={120} 
+                height={40}
+                className="w-auto h-auto max-h-8 md:max-h-10"
               />
             </Link>
             
-            {/* CTA */}
-            <div className="flex items-center">
-              <Button 
-                className="bg-black text-white hover:bg-gray-800 font-medium h-10 px-6 rounded-lg"
-                asChild
-              >
-                <Link href="/signup">Get early access</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </div>

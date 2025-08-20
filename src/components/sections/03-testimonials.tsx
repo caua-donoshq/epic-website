@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const quote = '"Before you open Cursor, open Epic so your AI coding assistant knows exactly what and how to build."';
+const quote = '"It\'s like vibe coding with a senior developer by your side"';
 
 export function Testimonials() {
   const containerRef = useRef<HTMLDivElement>(null);

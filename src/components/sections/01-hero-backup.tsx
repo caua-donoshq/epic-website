@@ -1,10 +1,11 @@
 "use client"
 
+import { RainbowButton } from "@/components/ui/button-rainbow"
+import Link from "next/link"
 import Image from "next/image"
-import { EpicMockupDemo } from "@/components/hero/EpicMockupDemo"
-import { WaitlistSignup } from "@/components/ui/waitlist-signup"
+import { AnimatedChatDemo } from "@/components/hero/AnimatedChatDemo"
 
-export function Hero() {
+export function HeroBackup() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-pink-50 via-purple-50 to-white">
       {/* Side gradients - pink/purple on left, blue on right */}
@@ -29,41 +30,35 @@ export function Hero() {
         {/* Logo */}
         <div className="mb-20">
           <Image 
-            src="/images/epic-logo.svg" 
+            src="/images/epic-new-logo.svg" 
             alt="Epic" 
-            width={160} 
-            height={50}
-            className="w-auto h-auto max-h-12 md:max-h-14 lg:max-h-16"
+            width={120} 
+            height={40}
+            className="h-10 w-auto"
           />
         </div>
         
         {/* Main heading */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-center leading-none md:leading-none lg:leading-none text-gray-900 mb-8 max-w-4xl" style={{ fontFamily: "'EB Garamond', serif" }}>
-          Vibe code reliable applications even if you&apos;re not an engineer
+          Vibe code reliable applications even if you're not an engineer
         </h1>
         
-        {/* Waitlist Signup */}
-        <div className="mb-8">
-          <WaitlistSignup />
-        </div>
+        {/* CTA Button */}
+        <Link href="/signup">
+          <RainbowButton className="mb-8">
+            Get early access
+          </RainbowButton>
+        </Link>
         
         {/* Subheading */}
-        <p className="text-center max-w-3xl text-md mb-16" style={{ color: '#7C7C7C' }}>
+        <p className="text-center max-w-2xl text-md" style={{ color: '#7C7C7C' }}>
           Epic is the AI tech lead that turns your ideas into tasks, detailed with the right stack,
 security rails, and architecture principles - so you can ship reliable applications
 (even if you&apos;re not an engineer).
         </p>
         
-        {/* Product Mockup */}
-        <div className="w-full max-w-[90%] mx-auto px-6 mt-12">
-          <div className="relative rounded-xl shadow-2xl overflow-hidden bg-white border border-gray-200">
-            {/* Product Screenshot Area */}
-            <div className="relative bg-gray-50 overflow-hidden" style={{ aspectRatio: '1920/1200' }}>
-              <EpicMockupDemo />
-            </div>
-          </div>
-        </div>
-        
+        {/* Chat Interface Demo */}
+        <AnimatedChatDemo />
       </div>
     </section>
   )

@@ -20,9 +20,9 @@ export default function Home() {
           <Hero />
           <CodingAssistants />
           <Testimonials />
-          <FeaturesOne />
-          <FeaturesBlock />
-          <FeaturesBar />
+          {/* <FeaturesOne /> */}
+          {/* <FeaturesBlock /> */}
+          {/* <FeaturesBar /> */}
           <FinalCTA />
         </main>
         <Footer />
