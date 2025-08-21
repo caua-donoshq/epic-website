@@ -1,6 +1,4 @@
 import { FadeIn } from "@/components/animations"
-import { RainbowButton } from "@/components/ui/button-rainbow"
-import Link from "next/link"
 
 export function FinalCTA() {
   return (
@@ -40,19 +38,11 @@ export function FinalCTA() {
             </h2>
             
             <p 
-              className="text-center max-w-2xl mx-auto mb-8" 
+              className="text-center max-w-2xl mx-auto" 
               style={{ color: '#7C7C7C', fontFamily: '"DM Sans", system-ui, -apple-system, sans-serif' }}
             >
               Start with Epic and let your AI do its best work.
             </p>
-
-            <div className="flex justify-center">
-              <Link href="/signup">
-                <RainbowButton className="mb-8">
-                  Get early access
-                </RainbowButton>
-              </Link>
-            </div>
           </div>
         </FadeIn>
       </div>

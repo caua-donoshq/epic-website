@@ -10,6 +10,11 @@ import { ThemeProvider } from '@/lib/theme-context';
 export const metadata: Metadata = {
   title: "Epic - AI Product Manager for AI Coding Assistants",
   description: "Transform your vision into structured prompts and tasks that AI coding assistants can execute. Built for vibe-coder founders.",
+  icons: {
+    icon: '/images/favicon.svg',
+    shortcut: '/images/favicon.svg',
+    apple: '/images/favicon.svg',
+  },
 };
 
 export default function RootLayout({

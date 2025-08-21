@@ -66,7 +66,7 @@ export function WaitlistSignupSimple() {
 
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md">
-      <div className="flex flex-col sm:flex-row gap-2 p-1 bg-white rounded-xl border border-gray-200 shadow-sm">
+      <div className="flex flex-row items-center gap-2 p-1 bg-white rounded-xl border border-gray-200 shadow-sm">
         <input
           type="email"
           placeholder="Enter your email"
@@ -78,7 +78,7 @@ export function WaitlistSignupSimple() {
         <Button 
           type="submit"
           disabled={isLoading || !email}
-          className="bg-[#FF6900] text-white hover:bg-[#E55F00] font-medium px-6 py-3 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+          className="bg-[#FF6900] text-white hover:bg-[#E55F00] font-medium px-4 sm:px-6 py-3 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap text-sm"
         >
           {isLoading ? "Joining..." : "Get early access"}
         </Button>

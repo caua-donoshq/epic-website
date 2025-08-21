@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { EpicMockupDemo } from "@/components/hero/EpicMockupDemo"
-import { WaitlistSignup } from "@/components/ui/waitlist-signup"
+import { WaitlistSignupSimple } from "@/components/ui/waitlist-signup-simple"
 
 export function Hero() {
   return (
@@ -42,24 +42,36 @@ export function Hero() {
           Vibe code reliable applications even if you&apos;re not an engineer
         </h1>
         
-        {/* Waitlist Signup */}
-        <div className="mb-8">
-          <WaitlistSignup />
-        </div>
-        
         {/* Subheading */}
-        <p className="text-center max-w-3xl text-md mb-16" style={{ color: '#7C7C7C' }}>
+        <p className="text-center max-w-3xl text-md mb-8" style={{ color: '#7C7C7C' }}>
           Epic is the AI tech lead that turns your ideas into tasks, detailed with the right stack,
 security rails, and architecture principles - so you can ship reliable applications
 (even if you&apos;re not an engineer).
         </p>
+        
+        {/* Waitlist Signup */}
+        <div className="mb-16">
+          <WaitlistSignupSimple />
+        </div>
         
         {/* Product Mockup */}
         <div className="w-full max-w-[90%] mx-auto px-6 mt-12">
           <div className="relative rounded-xl shadow-2xl overflow-hidden bg-white border border-gray-200">
             {/* Product Screenshot Area */}
             <div className="relative bg-gray-50 overflow-hidden" style={{ aspectRatio: '1920/1200' }}>
-              <EpicMockupDemo />
+              {/* Animation - Hidden on mobile, shown on desktop */}
+              <div className="hidden lg:block">
+                <EpicMockupDemo />
+              </div>
+              {/* Static Screenshot - Shown on mobile, hidden on desktop */}
+              <Image 
+                src="/images/product-screenshot.png" 
+                alt="Epic AI Product Manager Interface"
+                width={1920}
+                height={1200}
+                className="block lg:hidden w-full h-full object-cover"
+                priority
+              />
             </div>
           </div>
         </div>
