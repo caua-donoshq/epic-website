@@ -45,7 +45,7 @@ export function Hero() {
         {/* Subheading */}
         <p className="text-center max-w-3xl text-md mb-8" style={{ color: '#7C7C7C' }}>
           You tell Epic what you want to build. Epic turns your idea into tasks, detailed with the right stack,
-security rails, and architecture principles so that your coding assistant build it right.
+          security rails, and architecture principles so that your coding assistant build it right.
         </p>
         
         {/* Waitlist Signup */}
@@ -59,7 +59,9 @@ security rails, and architecture principles so that your coding assistant build 
             {/* Product Screenshot Area */}
             <div className="relative bg-gray-50 overflow-hidden" style={{ aspectRatio: '1920/1200' }}>
               {/* Animation - Hidden on mobile, shown on desktop */}
-              <EpicMockupDemo className="hidden lg:block" />
+              <div className="hidden lg:block">
+                <EpicMockupDemo />
+              </div>
               {/* Static Screenshot - Shown on mobile, hidden on desktop */}
               <Image 
                 src="/images/product-screenshot.png" 
