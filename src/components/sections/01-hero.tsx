@@ -59,9 +59,7 @@ security rails, and architecture principles so that your coding assistant build 
             {/* Product Screenshot Area */}
             <div className="relative bg-gray-50 overflow-hidden" style={{ aspectRatio: '1920/1200' }}>
               {/* Animation - Hidden on mobile, shown on desktop */}
-              <div className="hidden lg:block">
-                <EpicMockupDemo />
-              </div>
+              <EpicMockupDemo className="hidden lg:block" />
               {/* Static Screenshot - Shown on mobile, hidden on desktop */}
               <Image 
                 src="/images/product-screenshot.png" 
