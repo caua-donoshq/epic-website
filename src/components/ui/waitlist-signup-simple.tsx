@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import { supabase } from "@/lib/supabase"
 
 export function WaitlistSignupSimple() {
   const [email, setEmail] = useState("")
@@ -14,74 +14,58 @@ export function WaitlistSignupSimple() {
     
     setIsLoading(true)
 
-    // Create a hidden iframe to submit the form
-    const iframe = document.createElement('iframe')
-    iframe.style.display = 'none'
-    document.body.appendChild(iframe)
-
-    const form = document.createElement('form')
-    form.method = 'POST'
-    form.action = 'https://script.google.com/macros/s/AKfycbymnrFWZcNvo4Pu6S5PARAlT9PyALYnubkCqO5FU1_Sz1dAYXM1Fx24p39XNxJRCnSa/exec'
-    form.target = iframe.name
-
-    const emailInput = document.createElement('input')
-    emailInput.type = 'hidden'
-    emailInput.name = 'email'
-    emailInput.value = email
-
-    const timestampInput = document.createElement('input')
-    timestampInput.type = 'hidden'
-    timestampInput.name = 'timestamp'
-    timestampInput.value = new Date().toISOString()
-
-    form.appendChild(emailInput)
-    form.appendChild(timestampInput)
-    iframe.contentDocument?.body.appendChild(form)
-    
-    form.submit()
-
-    // Clean up and show success after a delay
+    // Show success immediately for better UX
     setTimeout(() => {
-      document.body.removeChild(iframe)
       setIsSubmitted(true)
       setIsLoading(false)
-    }, 2000)
+    }, 300) // Small delay just for the loading animation
+
+    // Insert email in the background
+    supabase
+      .from('waitlist')
+      .insert([{ email }])
+      .then(() => {
+        // Silently handle all errors since we already showed success
+        // This includes duplicate emails (23505) and any other errors
+      })
   }
 
   if (isSubmitted) {
     return (
-      <div className="flex flex-col items-center gap-4 p-6 bg-green-50 rounded-xl border border-green-200">
-        <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-          <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <div className="text-center">
-          <h3 className="font-semibold text-green-900 mb-1">You&apos;re on the list!</h3>
-          <p className="text-green-700 text-sm">We&apos;ll notify you when Epic is ready.</p>
+      <div className="w-full max-w-2xl">
+        <div className="flex flex-col gap-2">
+          <input
+            type="email"
+            value={email}
+            disabled
+            className="w-full px-6 py-3 text-black placeholder-gray-600 bg-transparent border border-black rounded-lg outline-none text-base cursor-not-allowed opacity-50"
+          />
+          <div className="w-full px-6 py-3 bg-[#2A2A2A] text-white font-medium rounded-lg text-center text-base">
+            You&apos;re in!
+          </div>
         </div>
       </div>
     )
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md">
-      <div className="flex flex-row items-center gap-2 p-1 bg-white rounded-xl border border-gray-200 shadow-sm">
+    <form onSubmit={handleSubmit} className="w-full max-w-2xl">
+      <div className="flex flex-col gap-2">
         <input
           type="email"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="flex-1 px-4 py-3 text-gray-900 placeholder-gray-500 bg-transparent border-none outline-none text-sm"
+          className="w-full px-6 py-3 text-black placeholder-gray-600 bg-transparent border border-black rounded-lg outline-none focus:border-gray-600 text-base"
         />
-        <Button 
+        <button
           type="submit"
           disabled={isLoading || !email}
-          className="bg-[#FF6900] text-white hover:bg-[#E55F00] font-medium px-4 sm:px-6 py-3 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap text-sm"
+          className="w-full px-6 py-3 bg-[#2A2A2A] text-white font-medium rounded-lg hover:bg-[#000000] disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-base"
         >
-          {isLoading ? "Joining..." : "Get early access"}
-        </Button>
+          {isLoading ? "Joining..." : "Get Early Access"}
+        </button>
       </div>
     </form>
   )

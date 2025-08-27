@@ -43,13 +43,30 @@ export function Testimonials() {
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-white dark:bg-[#08090A]">
+    <section className="relative min-h-screen" style={{ backgroundColor: '#F6F4F1' }}>
       <div 
         ref={containerRef}
         className="sticky top-0 flex items-center justify-center min-h-screen px-6"
       >
-        <div className="max-w-5xl mx-auto">
-          <p className="text-4xl md:text-6xl lg:text-6xl font-medium leading-tight tracking-tight text-center">
+        {/* Centered gradient behind quote */}
+        <div 
+          className="absolute inset-0 flex items-center justify-center pointer-events-none" 
+        >
+          <div
+            className="absolute w-[800px] h-[400px]"
+            style={{
+              background: `
+                radial-gradient(ellipse at center, rgba(255, 119, 0, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 30% 40%, rgba(242, 0, 255, 0.12) 0%, transparent 40%),
+                radial-gradient(ellipse at 70% 60%, rgba(255, 119, 0, 0.12) 0%, transparent 40%)
+              `,
+              filter: 'blur(80px)',
+              borderRadius: '50%'
+            }}
+          />
+        </div>
+        <div className="mx-auto max-w-3xl relative z-10">
+          <p className="text-4xl md:text-6xl lg:text-6xl font-normal leading-tight tracking-tight text-center text-black" style={{ fontFamily: "'EB Garamond', serif" }}>
             {words.map((word, index) => {
               // Calculate if this word should be highlighted based on progress
               const wordProgress = index / words.length;

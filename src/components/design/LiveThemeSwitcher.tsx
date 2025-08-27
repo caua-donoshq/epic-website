@@ -85,12 +85,46 @@ const presetThemes = [
       fontFamily: "Inter",
       fontWeight: 400
     }
+  },
+  {
+    name: "Claude",
+    tokens: {
+      ...defaultTokens,
+      primary: "#d97032", // Warm orange from Claude's palette
+      primaryForeground: "#ffffff",
+      secondary: "#f4ede8", // Light neutral
+      accent: "#f4ede8", // Matching secondary
+      background: "#faf9f7", // Very light warm background
+      foreground: "#2d2a23", // Dark text
+      card: "#faf9f7", // Same as background
+      border: "#e3ddd7", // Soft border
+      radius: 8, // Matching Claude's 0.5rem
+      spacing: 4, // Standard 0.25rem
+      fontFamily: "Inter", // Clean sans-serif
+      fontWeight: 400
+    }
   }
 ]
 
+const claudeTokens: DesignTokens = {
+  ...defaultTokens,
+  primary: "#d97032", // Warm orange from Claude's palette
+  primaryForeground: "#ffffff",
+  secondary: "#f4ede8", // Light neutral
+  accent: "#f4ede8", // Matching secondary
+  background: "#faf9f7", // Very light warm background
+  foreground: "#2d2a23", // Dark text
+  card: "#faf9f7", // Same as background
+  border: "#e3ddd7", // Soft border
+  radius: 8, // Matching Claude's 0.5rem
+  spacing: 4, // Standard 0.25rem
+  fontFamily: "Inter", // Clean sans-serif
+  fontWeight: 400
+}
+
 export function LiveThemeSwitcher() {
-  const [tokens, setTokens] = useState<DesignTokens>(defaultTokens)
-  const [activePreset, setActivePreset] = useState("Modern Sans")
+  const [tokens, setTokens] = useState<DesignTokens>(claudeTokens)
+  const [activePreset, setActivePreset] = useState("Claude")
 
   const handleTokenChange = (key: keyof DesignTokens, value: string | number) => {
     setTokens(prev => ({ ...prev, [key]: value }))

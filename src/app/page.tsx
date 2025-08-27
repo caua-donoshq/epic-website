@@ -15,14 +15,14 @@ export default function Home() {
   return (
     <>
       <Header />
-      <SmoothScroll className="min-h-screen bg-background">
+      <SmoothScroll className="min-h-screen" style={{ backgroundColor: '#F6F4F1' }}>
         <main>
           <Hero />
           <CodingAssistants />
           <Testimonials />
-          {/* <FeaturesOne /> */}
-          {/* <FeaturesBlock /> */}
-          {/* <FeaturesBar /> */}
+          <FeaturesOne />
+          <FeaturesBlock />
+          <FeaturesBar />
           <FinalCTA />
         </main>
         <Footer />

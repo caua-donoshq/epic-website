@@ -42,18 +42,13 @@ export function ThemeProvider({
     const root = window.document.documentElement
 
     root.classList.remove('light', 'dark')
-
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
-        .matches
-        ? 'dark'
-        : 'light'
-
-      root.classList.add(systemTheme)
-      return
-    }
-
-    root.classList.add(theme)
+    
+    // Force light theme always
+    root.classList.add('light')
+    
+    // Also set the background directly
+    root.style.backgroundColor = '#F6F4F1'
+    document.body.style.backgroundColor = '#F6F4F1'
   }, [theme])
 
   const value = {

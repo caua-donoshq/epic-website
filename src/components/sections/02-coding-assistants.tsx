@@ -8,10 +8,10 @@ const codingAssistants = [
 
 export function CodingAssistants() {
   return (
-    <section className="pt-20 pb-32 px-6 bg-white">
+    <section className="pt-20 pb-32 px-6" style={{ backgroundColor: '#F6F4F1' }}>
       <div className="container mx-auto max-w-6xl">
         <div className="text-center">
-          <h2 className="text-xl md:text-xl text-gray-600 max-w-3xl mx-auto mb-2 tracking-normal">
+          <h2 className="text-md md:text-md text-black max-w-3xl mx-auto mb-2 tracking-normal">
             Works with your favorite coding assistant.
           </h2>
           <p className="text-lg text-gray-500">

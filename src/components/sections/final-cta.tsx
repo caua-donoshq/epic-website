@@ -2,9 +2,9 @@ import { FadeIn } from "@/components/animations"
 
 export function FinalCTA() {
   return (
-    <section className="py-40 px-6 relative overflow-hidden bg-gradient-to-b from-pink-50 via-purple-50 to-white">
+    <section className="py-40 px-6 relative overflow-hidden" style={{ backgroundColor: '#F6F4F0' }}>
       {/* Top fade to seamlessly integrate with section above */}
-      <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-white to-transparent z-10" />
+      <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#F6F4F1] to-transparent z-10" />
       
       {/* Side gradients - pink/purple on left, orange on right */}
       <div className="absolute inset-0">
@@ -25,22 +25,19 @@ export function FinalCTA() {
       </div>
       
       {/* Bottom fade to seamlessly integrate with section below */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#F6F4F1] to-transparent z-10" />
       
       <div className="container mx-auto max-w-2xl relative z-10">
         <FadeIn>
           <div className="text-center">
             <h2 
-              className="text-4xl sm:text-5xl lg:text-6xl font-medium text-gray-900 mb-8 leading-tight"
-              style={{ fontFamily: '"DM Sans", system-ui, -apple-system, sans-serif' }}
+              className="text-4xl sm:text-5xl lg:text-6xl font-normal text-black mb-8 leading-tight tracking-tight"
+              style={{ fontFamily: "'EB Garamond', serif" }}
             >
               Ready to vibe-code without the chaos?
             </h2>
             
-            <p 
-              className="text-center max-w-2xl mx-auto" 
-              style={{ color: '#7C7C7C', fontFamily: '"DM Sans", system-ui, -apple-system, sans-serif' }}
-            >
+            <p className="text-center max-w-2xl mx-auto text-md text-black">
               Start with Epic and let your AI do its best work.
             </p>
           </div>

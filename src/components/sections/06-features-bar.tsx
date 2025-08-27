@@ -23,7 +23,7 @@ const features = [
 
 export function FeaturesBar() {
   return (
-    <section className="py-20 px-6 bg-white dark:bg-black text-black dark:text-white">
+    <section className="py-20 px-6 text-black dark:text-white" style={{ backgroundColor: '#F6F4F0' }}>
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (

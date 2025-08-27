@@ -28,11 +28,11 @@ export function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center pb-1">
               <Image 
-                src="/images/epic-logo.svg" 
+                src="/images/epic-logo-black.svg" 
                 alt="Epic" 
-                width={120} 
-                height={40}
-                className="w-auto h-auto max-h-8 md:max-h-10"
+                width={100} 
+                height={32}
+                className="w-auto h-auto max-h-6 md:max-h-8"
               />
             </Link>
             
