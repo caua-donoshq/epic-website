@@ -12,8 +12,11 @@ export const metadata: Metadata = {
   title: "Epic - AI Product Manager for AI Coding Assistants",
   description: "Transform your vision into structured prompts and tasks that AI coding assistants can execute. Built for vibe-coder founders.",
   icons: {
-    icon: '/images/favicon-black.svg',
-    shortcut: '/images/favicon-black.svg',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/images/favicon-black.svg', type: 'image/svg+xml' }
+    ],
+    shortcut: '/favicon.svg',
     apple: '/images/favicon-black.svg',
   },
 };
