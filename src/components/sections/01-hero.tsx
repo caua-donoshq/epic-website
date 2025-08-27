@@ -26,9 +26,10 @@ export function Hero() {
           <Image 
             src="/images/epic-logo-black.svg" 
             alt="Epic" 
-            width={160} 
-            height={50}
-            className="w-auto h-auto max-h-12 md:max-h-14 lg:max-h-8"
+            width={120} 
+            height={40}
+            className="w-auto h-8 md:h-10 lg:h-8"
+            priority
           />
         </div>
         

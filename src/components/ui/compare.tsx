@@ -46,7 +46,8 @@ export const Compare = ({
       const elapsedTime = Date.now() - startTime;
       const progress =
         (elapsedTime % (autoplayDuration * 2)) / autoplayDuration;
-      const percentage = progress <= 1 ? progress * 100 : (2 - progress) * 100;
+      // Reverse the percentage calculation to move from right to left
+      const percentage = progress <= 1 ? (1 - progress) * 100 : (progress - 1) * 100;
 
       setSliderXPercent(percentage);
       autoplayRef.current = setTimeout(animate, 16); // ~60fps

@@ -21,7 +21,7 @@ export function Header() {
       <div className="mx-auto px-6 py-3">
         <div className={`transition-all duration-300 ${
           hasScrolled 
-            ? 'bg-white/80 backdrop-blur-md shadow-sm rounded-full' 
+            ? 'bg-white/40 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.08)] border border-white/50 rounded-full' 
             : ''
         }`}>
           <div className="flex items-center justify-between h-12 px-4">
