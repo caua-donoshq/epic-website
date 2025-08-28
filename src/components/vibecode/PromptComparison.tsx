@@ -196,7 +196,7 @@ export function PromptComparison() {
         </div>
 
         {/* How to Do Card */}
-        <div>
+        <div className="mt-8 lg:mt-0">
           <h3 className="text-2xl font-normal mb-4 text-center text-gray-900" style={{ fontFamily: "'EB Garamond', serif" }}>
             How to Do
           </h3>
