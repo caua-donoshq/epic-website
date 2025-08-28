@@ -6,6 +6,7 @@ import {
   Testimonials, 
   FeaturesOne,
   FeaturesBlock,
+  VibeCodeConfidence,
   FeaturesBar,
   FinalCTA,
   Footer 
@@ -22,6 +23,7 @@ export default function Home() {
           <Testimonials />
           <FeaturesOne />
           <FeaturesBlock />
+          <VibeCodeConfidence />
           <FeaturesBar />
           <FinalCTA />
         </main>

@@ -36,6 +36,18 @@ export function Header() {
               />
             </Link>
             
+            {/* Get Early Access Button */}
+            <button
+              onClick={() => {
+                const heroSection = document.getElementById('hero')
+                if (heroSection) {
+                  heroSection.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
+              className="px-4 py-2 bg-black text-white text-sm font-medium rounded-md"
+            >
+              Get early access
+            </button>
           </div>
         </div>
       </div>

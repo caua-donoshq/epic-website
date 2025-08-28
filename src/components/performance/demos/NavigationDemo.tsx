@@ -99,13 +99,6 @@ export function NavigationDemo({ side }: NavigationDemoProps) {
                 {currentPageData.name}
               </h3>
               <p className="text-sm text-gray-600">{currentPageData.content}</p>
-              
-              {/* Mock content */}
-              <div className="mt-4 space-y-2">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="h-8 bg-gray-200 rounded animate-pulse" />
-                ))}
-              </div>
             </>
           )}
         </div>

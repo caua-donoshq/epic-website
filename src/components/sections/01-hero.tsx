@@ -5,7 +5,7 @@ import { WaitlistSignupSimple } from "@/components/ui/waitlist-signup-simple"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden" style={{ backgroundColor: '#F6F4F1' }}>
+    <section id="hero" className="relative min-h-screen overflow-hidden" style={{ backgroundColor: '#F6F4F1' }}>
       {/* Gradient Overlay */}
       <div 
         className="absolute inset-0 z-0" 
