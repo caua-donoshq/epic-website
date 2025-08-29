@@ -1,22 +1,22 @@
 "use client"
 
-import { Buildings, ArrowsClockwise, FileText } from "phosphor-react"
+import { Swap, Lightning, Stack } from "phosphor-react"
 
 const features = [
   {
-    icon: Buildings,
-    title: "Clean, Scalable Architecture", 
-    description: "Epic boilerplate uses a feature-based folder structure and follows strict separation of concerns principles to keep your codebase organized as you grow."
-  },
-  {
-    icon: ArrowsClockwise,
-    title: "Vendor-Independent Design",
+    icon: Swap,
+    title: "Vendor Independence", 
     description: "Swap coding assistants, auth providers, or databases anytime. Vendor independence is one of Epic's key principles so you avoid hidden lock-ins."
   },
   {
-    icon: FileText,
-    title: "Auto Documentation",
-    description: "Successful implementations are documented as they ship, so future prompts reuse knowledge instead of reinventing wheels and spending tokens."
+    icon: Lightning,
+    title: "Performance Infrastructure",
+    description: "Epic's boilerplate comes with a built-in performance infrastructure that you can easily import into your files to build lightning fast features."
+  },
+  {
+    icon: Stack,
+    title: "Vibe coder friendly tech stack",
+    description: "Epic helps you choose modern technologies that helps you build fast: Nextjs, React, Tailwind CSS, Shadcn Components, PostgreSQL, Drizzle ORM and Vercel."
   }
 ]
 
@@ -26,7 +26,13 @@ export function FeaturesBar() {
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="text-left">
+            <div 
+              key={index} 
+              className="text-left p-6 rounded-lg shadow-md"
+              style={{ 
+                backgroundColor: '#F6F4F1'
+              }}
+            >
               <div className="flex items-center gap-3 mb-4">
                 <feature.icon size={24} weight="regular" className="text-gray-700 dark:text-gray-300" />
                 <h3 className="text-lg text-black dark:text-white" style={{ fontFamily: "'EB Garamond', serif" }}>

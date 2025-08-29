@@ -44,7 +44,7 @@ export function Header() {
                   heroSection.scrollIntoView({ behavior: 'smooth' })
                 }
               }}
-              className="px-4 py-2 bg-black text-white text-sm font-medium rounded-md"
+              className="px-4 py-2 bg-black text-white text-sm font-medium rounded-full hover:bg-orange-500 transition-colors"
             >
               Get early access
             </button>

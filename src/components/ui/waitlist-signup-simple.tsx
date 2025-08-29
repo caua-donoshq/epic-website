@@ -32,15 +32,15 @@ export function WaitlistSignupSimple() {
 
   if (isSubmitted) {
     return (
-      <div className="w-full max-w-2xl">
-        <div className="flex flex-col gap-2">
+      <div className="w-full">
+        <div className="flex items-center rounded-full overflow-hidden backdrop-blur-md bg-white/20 shadow-lg">
           <input
             type="email"
             value={email}
             disabled
-            className="w-full px-6 py-3 text-black placeholder-gray-600 bg-transparent border border-black rounded-lg outline-none text-base cursor-not-allowed opacity-50"
+            className="flex-1 px-6 py-3 text-black placeholder-gray-600 bg-transparent outline-none text-base cursor-not-allowed opacity-50"
           />
-          <div className="w-full px-6 py-3 bg-[#2A2A2A] text-white font-medium rounded-lg text-center text-base">
+          <div className="px-10 py-3 bg-black/80 backdrop-blur-sm text-white font-medium text-base whitespace-nowrap min-w-max rounded-full shadow-lg">
             You&apos;re in!
           </div>
         </div>
@@ -49,20 +49,20 @@ export function WaitlistSignupSimple() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-2xl">
-      <div className="flex flex-col gap-2">
+    <form onSubmit={handleSubmit} className="w-full">
+      <div className="flex items-center rounded-full overflow-hidden backdrop-blur-md bg-white/20 shadow-lg">
         <input
           type="email"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="w-full px-6 py-3 text-black placeholder-gray-600 bg-transparent border border-black rounded-lg outline-none focus:border-gray-600 text-base"
+          className="flex-1 px-6 py-3 text-black placeholder-gray-950 bg-transparent outline-none text-base"
         />
         <button
           type="submit"
           disabled={isLoading || !email}
-          className="w-full px-6 py-3 bg-[#2A2A2A] text-white font-medium rounded-lg hover:bg-[#000000] disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-base"
+          className="px-10 py-3 bg-black backdrop-blur-md text-white font-medium hover:bg-orange-500/80 hover:backdrop-blur-sm disabled:cursor-not-allowed transition-all text-base whitespace-nowrap min-w-max rounded-full shadow-lg"
         >
           {isLoading ? "Joining..." : "Get Early Access"}
         </button>

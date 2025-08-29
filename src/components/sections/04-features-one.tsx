@@ -1,21 +1,20 @@
 import Image from "next/image"
-import { Compare } from "@/components/ui/compare"
 
 const features = [
   {
-    title: "Spend less tokens with AI friendly architecture",
-    description: "Epic organizes your code so assistants can understand your codebase using fewer context tokens. You spend less on upgrades and never stall waiting for usage limits to reset.",
+    title: "Clean Architecture",
+    description: "Every feature built with Epic is modular and easy to maintain and follows strict separation of concerns and 'don't repeat yourself' (DRY) principles.",
     icon: "/images/spend-less-tokens 1.svg"
   },
   {
-    title: "Security peace of mind", 
-    description: "Every task ships with clear security criteria, letting your coding assistant know the exact checks to pass, so you launch without the \"will my app get hacked?\" anxiety.",
+    title: "Built-In Security Middleware", 
+    description: "Epic standard boilerplate comes with a robust, built-in security infrastructure that protects your app against common web apps vulnerabilities.",
     icon: "/images/security-peace-of-mind 1.svg"
   },
   {
-    title: "Less Vibe Debugging",
-    description: "Epic's principles keep your application code readable and maintainable. When bugs appear, it is easier for ai coding assistants to understand the fix instead of wrestling with code debt spaghetti.",
-    icon: "/images/less-vibe-debugging 1.svg"
+    title: "Built-In Authentication",
+    description: "Epic standard boilerplate comes with built in Authentication, password recovery and Magic Link/ OTP login.",
+    icon: "/images/built-in-auth.svg"
   },
   {
     title: "",
@@ -146,20 +145,15 @@ export function FeaturesOne() {
                       </div>
                     </div>
                   ) : index === 1 ? (
-                    // Compare component for Less Vibe Debugging
+                    // Built-in Auth SVG
                     <div className="mt-auto flex justify-center">
-                      <div className="rounded-lg overflow-hidden shadow-md" style={{ backgroundColor: '#F6F4F0', border: '1px solid #D8D8D8' }}>
-                        <Compare
-                          firstImage="/images/clean-code.svg"
-                          secondImage="/images/messy-code.svg"
-                          firstImageClassName="object-cover object-center"
-                          secondImageClassname="object-cover object-center"
-                          className="h-[200px] w-[340px]"
-                          slideMode="hover"
-                          showHandlebar={false}
-                          initialSliderPercentage={30}
-                        />
-                      </div>
+                      <Image
+                        src="/images/built-in-auth.svg"
+                        alt="Built-in Authentication Features"
+                        width={340}
+                        height={200}
+                        className="object-contain"
+                      />
                     </div>
                   ) : (
                     // Regular icon for other cards

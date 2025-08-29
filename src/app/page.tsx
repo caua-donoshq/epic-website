@@ -3,11 +3,10 @@ import {
   Header,
   Hero, 
   CodingAssistants, 
-  Testimonials, 
+  CreateBeautifulApps,
   FeaturesOne,
-  FeaturesBlock,
-  VibeCodeConfidence,
   FeaturesBar,
+  FAQ,
   FinalCTA,
   Footer 
 } from "@/components/sections"
@@ -20,11 +19,10 @@ export default function Home() {
         <main>
           <Hero />
           <CodingAssistants />
-          <Testimonials />
+          <CreateBeautifulApps />
           <FeaturesOne />
-          <FeaturesBlock />
-          <VibeCodeConfidence />
           <FeaturesBar />
+          <FAQ />
           <FinalCTA />
         </main>
         <Footer />

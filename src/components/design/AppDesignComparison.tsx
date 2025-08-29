@@ -11,7 +11,7 @@ export function AppDesignComparison() {
         className="w-full max-w-[350px] h-[225px] sm:max-w-[500px] sm:h-[320px] md:max-w-[700px] md:h-[450px] lg:max-w-[900px] lg:h-[550px] rounded-2xl shadow-lg"
         slideMode="hover"
         initialSliderPercentage={50}
-        autoplay={true}
+        autoplay={false}
         autoplayDuration={4000}
       />
     </div>
