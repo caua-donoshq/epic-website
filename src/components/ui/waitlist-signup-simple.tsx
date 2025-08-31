@@ -33,14 +33,14 @@ export function WaitlistSignupSimple() {
   if (isSubmitted) {
     return (
       <div className="w-full">
-        <div className="flex items-center rounded-full overflow-hidden backdrop-blur-md bg-white/20 shadow-lg">
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-0 sm:rounded-full sm:overflow-hidden sm:backdrop-blur-md sm:bg-white/20 sm:shadow-lg">
           <input
             type="email"
             value={email}
             disabled
-            className="flex-1 px-6 py-3 text-black placeholder-gray-600 bg-transparent outline-none text-base cursor-not-allowed opacity-50"
+            className="w-full sm:flex-1 px-6 py-4 sm:py-3 text-base font-normal leading-relaxed text-black placeholder-gray-600 bg-white/30 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none outline-none rounded-full sm:rounded-none shadow-lg sm:shadow-none cursor-not-allowed opacity-50"
           />
-          <div className="px-10 py-3 bg-black/80 backdrop-blur-sm text-white font-medium text-base whitespace-nowrap min-w-max rounded-full shadow-lg">
+          <div className="w-full sm:w-auto px-6 py-4 sm:px-10 sm:py-3 bg-black/80 backdrop-blur-sm text-white font-medium text-base whitespace-nowrap min-w-max rounded-full shadow-lg">
             You&apos;re in!
           </div>
         </div>
@@ -50,19 +50,19 @@ export function WaitlistSignupSimple() {
 
   return (
     <form onSubmit={handleSubmit} className="w-full">
-      <div className="flex items-center rounded-full overflow-hidden backdrop-blur-md bg-white/20 shadow-lg">
+      <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-0 sm:rounded-full sm:overflow-hidden sm:backdrop-blur-md sm:bg-white/20 sm:shadow-lg">
         <input
           type="email"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="flex-1 px-6 py-3 text-black placeholder-gray-950 bg-transparent outline-none text-base"
+          className="w-full sm:flex-1 px-6 py-4 sm:py-3 text-base font-normal leading-relaxed text-black placeholder-gray-950 bg-white/30 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none outline-none rounded-full sm:rounded-none shadow-lg sm:shadow-none"
         />
         <button
           type="submit"
           disabled={isLoading || !email}
-          className="px-10 py-3 bg-black backdrop-blur-md text-white font-medium hover:bg-orange-500/80 hover:backdrop-blur-sm disabled:cursor-not-allowed transition-all text-base whitespace-nowrap min-w-max rounded-full shadow-lg"
+          className="w-full sm:w-auto px-6 py-4 sm:px-10 sm:py-3 bg-black backdrop-blur-md text-white font-medium hover:bg-orange-500/80 hover:backdrop-blur-sm disabled:cursor-not-allowed transition-all text-base whitespace-nowrap min-w-max rounded-full shadow-lg"
         >
           {isLoading ? "Joining..." : "Get Early Access"}
         </button>

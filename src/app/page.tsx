@@ -2,10 +2,11 @@ import { SmoothScroll } from "@/components/animations"
 import { 
   Header,
   Hero, 
-  CodingAssistants, 
+  CodingAssistants,
+  TaskAnatomy, 
   CreateBeautifulApps,
   FeaturesOne,
-  FeaturesBar,
+  FeaturesTwo,
   FAQ,
   FinalCTA,
   Footer 
@@ -19,9 +20,10 @@ export default function Home() {
         <main>
           <Hero />
           <CodingAssistants />
+          <TaskAnatomy />
           <CreateBeautifulApps />
           <FeaturesOne />
-          <FeaturesBar />
+          <FeaturesTwo />
           <FAQ />
           <FinalCTA />
         </main>

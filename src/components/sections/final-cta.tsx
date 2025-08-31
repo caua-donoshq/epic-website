@@ -37,7 +37,7 @@ export function FinalCTA() {
               Ready to vibe-code without the chaos?
             </h2>
             
-            <p className="text-center max-w-2xl mx-auto text-md text-black">
+            <p className="text-center max-w-2xl mx-auto text-base font-normal leading-relaxed text-black">
               Start with Epic and let your AI do its best work.
             </p>
           </div>

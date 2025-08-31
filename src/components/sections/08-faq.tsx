@@ -102,7 +102,7 @@ export function FAQ() {
             >
               Frequently Asked Questions
             </h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-base font-normal leading-relaxed text-black">
               Everything you need to know about building with Epic
             </p>
           </div>
@@ -136,7 +136,7 @@ export function FAQ() {
                     <div className="px-6 pb-5">
                       <div className="prose prose-gray max-w-none">
                         {typeof faq.answer === 'string' ? (
-                          <p className="text-gray-600 text-sm leading-relaxed">
+                          <p className="text-base font-normal leading-loose text-black">
                             {faq.answer}
                           </p>
                         ) : (
@@ -148,7 +148,7 @@ export function FAQ() {
                                 </h4>
                                 <ul className="space-y-2">
                                   {section.items.map((item, itemIndex) => (
-                                    <li key={itemIndex} className="text-gray-600 text-sm">
+                                    <li key={itemIndex} className="text-base font-normal leading-loose text-black">
                                       <span className="font-medium text-black">{item.label}:</span>{' '}
                                       {item.value}
                                     </li>

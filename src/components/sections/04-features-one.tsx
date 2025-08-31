@@ -17,15 +17,15 @@ const features = [
     icon: "/images/built-in-auth.svg"
   },
   {
-    title: "",
-    description: "",
-    icon: ""
+    title: "Vibe coder friendly tech stack",
+    description: "Epic helps you choose modern technologies that helps you build fast: Nextjs, React, Tailwind CSS, Shadcn Components, PostgreSQL, Drizzle ORM and Vercel.",
+    icon: "/images/tech-stack.svg"
   }
 ]
 
 export function FeaturesOne() {
   return (
-    <section className="py-24 px-4" style={{ backgroundColor: '#F6F4F1' }}>
+    <section className="pt-24 pb-0 px-4" style={{ backgroundColor: '#F6F4F1' }}>
       <div className="container mx-auto max-w-6xl">
         
         {/* Header Section */}
@@ -36,7 +36,7 @@ export function FeaturesOne() {
               fontFamily: "'EB Garamond', serif"
             }}
           >
-            Built for vibe coders
+            Built for Vibe Coders
           </h2>
         </div>
         
@@ -80,7 +80,7 @@ export function FeaturesOne() {
           </div>
 
           {/* Second and third cards - side by side */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative pt-8 pb-8">
             {/* Vertical divider */}
             <div 
               className="hidden md:block absolute left-1/2 w-px"
@@ -103,7 +103,7 @@ export function FeaturesOne() {
                 
                 {/* Description */}
                 {feature.description && (
-                  <p className="text-md font-normal leading-relaxed text-black mb-6">
+                  <p className="text-base font-normal leading-relaxed text-black">
                     {feature.description}
                   </p>
                 )}
@@ -171,6 +171,49 @@ export function FeaturesOne() {
               </div>
             ))}
           </div>
+
+          {/* Horizontal divider */}
+          <div className="w-full h-px" style={{ backgroundColor: '#C7C5C3', marginTop: '-1px' }} />
+
+          {/* Fourth card - full width with image on right */}
+          <div className="pt-8">
+            <div className="rounded-2xl p-8 min-h-[280px] flex flex-col md:flex-row items-center gap-4">
+              <div className="flex-1">
+                {/* Title */}
+                {features[3].title && (
+                  <h3 
+                    className="text-4xl font-normal mb-3 text-black max-w-96"
+                    style={{ fontFamily: "'EB Garamond', serif" }}
+                  >
+                    {features[3].title}
+                  </h3>
+                )}
+                
+                {/* Description */}
+                {features[3].description && (
+                  <p className="text-base font-normal leading-relaxed text-black max-w-96">
+                    {features[3].description}
+                  </p>
+                )}
+              </div>
+              
+              {/* Icon on the right */}
+              {features[3].icon && (
+                <div className="flex-shrink-0">
+                  <Image 
+                    src={features[3].icon} 
+                    alt={features[3].title}
+                    width={320}
+                    height={320}
+                    className="object-contain"
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Horizontal divider at bottom */}
+          <div className="w-full h-px mt-8" style={{ backgroundColor: '#C7C5C3' }} />
         </div>
         
       </div>
