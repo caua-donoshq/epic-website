@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://epic.io/sitemap.xml
+
+# Favicon directive
+User-agent: *
+Allow: /favicon.ico
+Allow: /icon.svg
+Allow: /favicon.svg
+Allow: /images/favicon-black.svg
+Allow: /images/favicon-white.svg

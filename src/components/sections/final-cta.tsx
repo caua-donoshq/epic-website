@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { FadeIn } from "@/components/animations"
 
 export function FinalCTA() {
@@ -6,22 +7,17 @@ export function FinalCTA() {
       {/* Top fade to seamlessly integrate with section above */}
       <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#F6F4F1] to-transparent z-10" />
       
-      {/* Side gradients - pink/purple on left, orange on right */}
-      <div className="absolute inset-0">
-        {/* Left gradient - pink/purple */}
-        <div 
-          className="absolute left-0 top-0 h-full w-1/2"
-          style={{
-            backgroundImage: 'radial-gradient(ellipse at left center, rgba(236, 72, 153, 0.3), transparent 70%)'
-          }}
-        />
-        {/* Right gradient - orange */}
-        <div 
-          className="absolute right-0 top-0 h-full w-1/2"
-          style={{
-            backgroundImage: 'radial-gradient(ellipse at right center, rgba(255, 107, 0, 0.3), transparent 70%)'
-          }}
-        />
+      {/* Gradient Image Overlay */}
+      <div className="absolute inset-0 z-0 flex items-center justify-center">
+        <div className="relative w-full h-full max-w-6xl">
+          <Image
+            src="/images/gradient.svg"
+            alt=""
+            fill
+            className="object-contain opacity-80"
+            priority
+          />
+        </div>
       </div>
       
       {/* Bottom fade to seamlessly integrate with section below */}

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack -p 3001 -H 0.0.0.0",
+    "prebuild": "cp public/favicon.svg src/app/favicon.ico 2>/dev/null || true",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

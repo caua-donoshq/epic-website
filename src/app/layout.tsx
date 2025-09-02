@@ -13,11 +13,29 @@ export const metadata: Metadata = {
   description: "Transform your vision into structured prompts and tasks that AI coding assistants can execute. Built for vibe-coder founders.",
   icons: {
     icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
       { url: '/images/favicon-black.svg', type: 'image/svg+xml' }
     ],
-    shortcut: '/favicon.svg',
-    apple: '/images/favicon-black.svg',
+    shortcut: [
+      { url: '/icon.svg', type: 'image/svg+xml' }
+    ],
+    apple: [
+      { url: '/apple-icon.svg', type: 'image/svg+xml' },
+      { url: '/images/favicon-black.svg', type: 'image/svg+xml' }
+    ],
+    other: [
+      {
+        rel: 'icon',
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+      {
+        rel: 'mask-icon',
+        url: '/images/favicon-black.svg',
+        color: '#000000',
+      },
+    ],
   },
 };
 
@@ -30,6 +48,14 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+        
+        {/* Explicit favicon declarations to override Vercel defaults */}
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-icon.svg" />
+        <link rel="mask-icon" href="/images/favicon-black.svg" color="#000000" />
+        
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />

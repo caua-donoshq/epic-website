@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const quote = '"It\'s like vibe coding with a senior developer by your side"';
 
@@ -25,8 +26,8 @@ export function Testimonials() {
         const sectionHeight = sectionRect.height;
         
         // Progress from 0 to 1 as we scroll through the section
-        // Complete the animation within the first 50% of the section scroll
-        const scrollProgress = Math.min(1, scrolledIntoSection / (sectionHeight * 0.5));
+        // Complete the animation within the first 30% of the section scroll (faster)
+        const scrollProgress = Math.min(1, scrolledIntoSection / (sectionHeight * 0.3));
         setProgress(scrollProgress);
       } else {
         // Reset progress if we're above the section
@@ -43,27 +44,22 @@ export function Testimonials() {
   }, []);
 
   return (
-    <section className="relative min-h-screen" style={{ backgroundColor: '#F6F4F1' }}>
+    <section className="relative min-h-screen overflow-visible" style={{ backgroundColor: '#F6F4F1' }}>
       <div 
         ref={containerRef}
-        className="sticky top-0 flex items-center justify-center min-h-screen px-6"
+        className="sticky top-0 flex items-center justify-center min-h-screen px-6 overflow-visible"
       >
-        {/* Centered gradient behind quote */}
-        <div 
-          className="absolute inset-0 flex items-center justify-center pointer-events-none" 
-        >
-          <div
-            className="absolute w-[800px] h-[400px]"
-            style={{
-              background: `
-                radial-gradient(ellipse at center, rgba(255, 119, 0, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 30% 40%, rgba(242, 0, 255, 0.12) 0%, transparent 40%),
-                radial-gradient(ellipse at 70% 60%, rgba(255, 119, 0, 0.12) 0%, transparent 40%)
-              `,
-              filter: 'blur(80px)',
-              borderRadius: '50%'
-            }}
-          />
+        {/* Gradient background behind quote */}
+        <div className="absolute inset-0 z-0 flex items-center justify-center">
+          <div className="relative w-full h-full max-w-6xl">
+            <Image
+              src="/images/gradient.svg"
+              alt=""
+              fill
+              className="object-contain opacity-80"
+              priority
+            />
+          </div>
         </div>
         <div className="mx-auto max-w-3xl relative z-10">
           <p className="text-4xl md:text-6xl lg:text-6xl font-normal leading-tight tracking-tight text-center text-black" style={{ fontFamily: "'EB Garamond', serif" }}>

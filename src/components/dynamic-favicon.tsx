@@ -7,19 +7,32 @@ export function DynamicFavicon() {
     const updateFavicon = (isDark: boolean) => {
       const faviconPath = isDark ? '/images/favicon-white.svg' : '/images/favicon-black.svg';
       
-      // Update all favicon links
-      const links: NodeListOf<HTMLLinkElement> = document.querySelectorAll("link[rel*='icon']");
-      links.forEach(link => {
-        link.href = faviconPath;
+      // Remove ALL existing favicon links to prevent Vercel overrides
+      const existingLinks: NodeListOf<HTMLLinkElement> = document.querySelectorAll("link[rel*='icon'], link[rel='shortcut icon'], link[rel='apple-touch-icon']");
+      existingLinks.forEach(link => {
+        link.remove();
       });
       
-      // If no favicon links exist, create them
-      if (links.length === 0) {
-        const link = document.createElement('link');
-        link.rel = 'icon';
-        link.href = faviconPath;
-        document.head.appendChild(link);
-      }
+      // Create new favicon links with high priority
+      const iconLink = document.createElement('link');
+      iconLink.rel = 'icon';
+      iconLink.type = 'image/svg+xml';
+      iconLink.href = faviconPath;
+      
+      const shortcutLink = document.createElement('link');
+      shortcutLink.rel = 'shortcut icon';
+      shortcutLink.type = 'image/svg+xml';
+      shortcutLink.href = faviconPath;
+      
+      const appleLink = document.createElement('link');
+      appleLink.rel = 'apple-touch-icon';
+      appleLink.href = faviconPath;
+      
+      // Insert at the beginning of head to ensure priority
+      const firstChild = document.head.firstChild;
+      document.head.insertBefore(iconLink, firstChild);
+      document.head.insertBefore(shortcutLink, firstChild);
+      document.head.insertBefore(appleLink, firstChild);
     };
 
     // Check if user prefers dark mode

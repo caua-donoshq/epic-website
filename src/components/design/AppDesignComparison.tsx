@@ -7,8 +7,10 @@ export function AppDesignComparison() {
     <div className="flex items-center justify-center px-4">
       <Compare
         firstImage="/images/good-design.svg"
-        secondImage="/images/bad-design.png"
-        className="w-full max-w-[350px] h-[225px] sm:max-w-[500px] sm:h-[320px] md:max-w-[700px] md:h-[450px] lg:max-w-[900px] lg:h-[550px] rounded-2xl shadow-lg"
+        secondImage="/images/bad-design.svg"
+        className="w-full max-w-[320px] h-[200px] sm:max-w-[480px] sm:h-[300px] md:max-w-[640px] md:h-[400px] lg:max-w-[800px] lg:h-[500px]"
+        firstImageClassName=""
+        secondImageClassname=""
         slideMode="hover"
         initialSliderPercentage={50}
         autoplay={false}

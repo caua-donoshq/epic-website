@@ -7,10 +7,10 @@ export function Hero() {
   return (
     <section id="hero" className="relative min-h-screen overflow-hidden" style={{ backgroundColor: '#F6F4F1' }}>
       {/* Gradient Image Overlay */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center">
-        <div className="relative w-full h-full max-w-6xl">
+      <div className="absolute top-0 left-0 right-0 h-[90vh] z-0 flex items-center justify-center -mt-20">
+        <div className="relative w-3/4 h-full max-w-4xl">
           <Image
-            src="/images/gradient.png"
+            src="/images/gradient.svg"
             alt=""
             fill
             className="object-contain opacity-80"

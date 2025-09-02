@@ -3,7 +3,8 @@ import {
   Header,
   Hero, 
   CodingAssistants,
-  TaskAnatomy, 
+  TaskAnatomy,
+  Testimonials,
   CreateBeautifulApps,
   FeaturesOne,
   FeaturesTwo,
@@ -21,6 +22,7 @@ export default function Home() {
           <Hero />
           <CodingAssistants />
           <TaskAnatomy />
+          <Testimonials />
           <CreateBeautifulApps />
           <FeaturesOne />
           <FeaturesTwo />
