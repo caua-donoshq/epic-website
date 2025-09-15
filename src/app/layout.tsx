@@ -7,6 +7,7 @@ import '@fontsource/inter-tight/700.css';
 import { ConsoleEasterEgg } from '@/components/console-easter-egg';
 import { ThemeProvider } from '@/lib/theme-context';
 import { DynamicFavicon } from '@/components/dynamic-favicon';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Epic - AI Product Manager for AI Coding Assistants",
@@ -71,6 +72,7 @@ export default function RootLayout({
           <DynamicFavicon />
           {children}
           <ConsoleEasterEgg />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
