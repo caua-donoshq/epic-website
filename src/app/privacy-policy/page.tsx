@@ -13,11 +13,11 @@ export default function PrivacyPolicy() {
             <p className="text-sm text-gray-600">
               <strong>Effective date:</strong> September 23, 2025<br/>
               <strong>Controller:</strong> <strong>Catchy Assessoria Empresarial LTDA</strong>, CNPJ <strong>56.221.911/0001-01</strong>, registered office at <strong>Av. Eng. Luiz Carlos Berrini, 155–255, Torre Kansas, ZIP 04571-900, São Paulo/SP, Brazil</strong>.<br/>
-              <strong>Data Protection Officer (DPO):</strong> <strong>Deborah Barreira Folloni</strong> — <Link href="mailto:deb@donoshq.com" className="text-blue-600 hover:underline">deb@donoshq.com</Link>
+              <strong>Data Protection Officer (DPO):</strong> <Link href="mailto:legal@donoshq.com" className="text-blue-600 hover:underline">legal@donoshq.com</Link>
             </p>
 
             <p>
-              This Privacy Policy explains how <strong>Epic</strong> (the "Service") collects and processes personal data through the <strong>goepic.dev</strong> website, applications, and integrations. We comply with <strong>Brazil's General Data Protection Law (LGPD – Law No. 13,709/2018)</strong>, the <strong>Brazilian Internet Civil Framework (Law No. 12,965/2014)</strong>, and <strong>Google's policies</strong> when you choose to connect your Google account (OAuth).
+              This Privacy Policy explains how <strong>Epic</strong> (the &ldquo;Service&rdquo;) collects and processes personal data through the <strong>goepic.dev</strong> website, applications, and integrations. We comply with <strong>Brazil&apos;s General Data Protection Law (LGPD – Law No. 13,709/2018)</strong>, the <strong>Brazilian Internet Civil Framework (Law No. 12,965/2014)</strong>, and <strong>Google&apos;s policies</strong> when you choose to connect your Google account (OAuth).
             </p>
 
             <hr className="my-8"/>
@@ -78,14 +78,14 @@ export default function PrivacyPolicy() {
             <section id="ai-processing">
               <h2 className="text-2xl font-bold mb-4">3. AI Processing and Service Providers (Processors)</h2>
               <p>
-                To deliver "AI Product Manager" capabilities, Epic may process your text/documents through cloud providers and/or AI model services under <strong>data processing agreements</strong> and security controls (encryption in transit, access control, audit logs). <strong>We do not use your data to train third-party, general-purpose models outside the scope of the Service.</strong>
+                To deliver &ldquo;AI Product Manager&rdquo; capabilities, Epic may process your text/documents through cloud providers and/or AI model services under <strong>data processing agreements</strong> and security controls (encryption in transit, access control, audit logs). <strong>We do not use your data to train third-party, general-purpose models outside the scope of the Service.</strong>
               </p>
             </section>
 
             <hr className="my-8"/>
 
             <section id="google-oauth">
-              <h2 className="text-2xl font-bold mb-4">4. Google OAuth & "Limited Use"</h2>
+              <h2 className="text-2xl font-bold mb-4">4. Google OAuth &amp; &ldquo;Limited Use&rdquo;</h2>
               <p className="mb-4">When you connect your Google account, we:</p>
               <ol className="list-decimal pl-6">
                 <li className="mb-2"><strong>Limit our use</strong> of Google user data <strong>solely</strong> to provide and improve <strong>user-facing features</strong> of Epic.</li>
@@ -94,7 +94,7 @@ export default function PrivacyPolicy() {
                 <li className="mb-2"><strong>Do not allow human reading</strong> of Google data, except with your explicit consent, for security/bug investigations, or where required by law.</li>
               </ol>
               <p>
-                You can revoke Epic's access at any time in your Google Account <strong>Security Settings</strong>.
+                You can revoke Epic&apos;s access at any time in your Google Account <strong>Security Settings</strong>.
               </p>
             </section>
 
@@ -109,7 +109,7 @@ export default function PrivacyPolicy() {
                 <li><strong>Corporate transactions</strong> (merger, acquisition, asset sale), maintaining protections consistent with this Policy and notifying users.</li>
               </ul>
               <p>
-                When we act as a <strong>processor</strong> for enterprise customers, we follow the customer's (controller's) documented instructions in accordance with LGPD.
+                When we act as a <strong>processor</strong> for enterprise customers, we follow the customer&apos;s (controller&apos;s) documented instructions in accordance with LGPD.
               </p>
             </section>
 
@@ -152,7 +152,7 @@ export default function PrivacyPolicy() {
                 You may request: <strong>confirmation and access</strong> to data; <strong>correction</strong> of inaccurate/outdated data; <strong>anonymization, blocking, or deletion</strong> of unnecessary/excess data; <strong>portability</strong>; <strong>information about sharing</strong>; <strong>withdrawal of consent</strong>; and <strong>review of automated decisions</strong> where applicable.
               </p>
               <p>
-                To exercise your rights, contact our DPO at <Link href="mailto:deb@donoshq.com" className="text-blue-600 hover:underline">deb@donoshq.com</Link>.
+                To exercise your rights, contact our DPO at <Link href="mailto:legal@donoshq.com" className="text-blue-600 hover:underline">legal@donoshq.com</Link>.
               </p>
             </section>
 
@@ -200,8 +200,8 @@ export default function PrivacyPolicy() {
             <section id="contact">
               <h2 className="text-2xl font-bold mb-4">14. Contact</h2>
               <p>
-                <strong>Deborah Barreira Folloni (DPO)</strong><br/>
-                <strong>Email:</strong> <Link href="mailto:deb@donoshq.com" className="text-blue-600 hover:underline">deb@donoshq.com</Link><br/>
+                <strong>Data Protection Officer (DPO)</strong><br/>
+                <strong>Email:</strong> <Link href="mailto:legal@donoshq.com" className="text-blue-600 hover:underline">legal@donoshq.com</Link><br/>
                 <strong>Postal address:</strong> Av. Eng. Luiz Carlos Berrini, 155–255, Torre Kansas, ZIP 04571-900, São Paulo/SP, Brazil
               </p>
             </section>

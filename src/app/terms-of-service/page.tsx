@@ -13,7 +13,7 @@ export default function TermsOfService() {
             <p className="text-sm text-gray-600 mb-6">
               <strong>Effective date:</strong> September 23, 2025<br/>
               <strong>Controller/Provider:</strong> Catchy Assessoria Empresarial LTDA, CNPJ 56.221.911/0001-01, registered office at Av. Eng. Luiz Carlos Berrini, 155–255, Torre Kansas, ZIP 04571-900, São Paulo/SP, Brazil.<br/>
-              <strong>Legal Contact/DPO:</strong> Deborah Barreira Folloni — <Link href="mailto:deb@donoshq.com" className="text-blue-600 hover:underline">deb@donoshq.com</Link>
+              <strong>Legal Contact/DPO:</strong> <Link href="mailto:legal@donoshq.com" className="text-blue-600 hover:underline">legal@donoshq.com</Link>
             </p>
 
             <p className="mb-4">
@@ -220,7 +220,7 @@ export default function TermsOfService() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">24. Communications</h2>
               <p>
-                Formal notices may be sent to <Link href="mailto:deb@donoshq.com" className="text-blue-600 hover:underline">deb@donoshq.com</Link>. Product communications may occur within Epic itself or via email associated with your account.
+                Formal notices may be sent to <Link href="mailto:legal@donoshq.com" className="text-blue-600 hover:underline">legal@donoshq.com</Link>. Product communications may occur within Epic itself or via email associated with your account.
               </p>
             </section>
 
