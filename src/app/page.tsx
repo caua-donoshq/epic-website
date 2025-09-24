@@ -1,36 +1,33 @@
 import { SmoothScroll } from "@/components/animations"
-import { 
-  Header,
-  Hero, 
+import { Header, Footer } from "@/components/sections"
+import {
+  Hero,
   CodingAssistants,
   TaskAnatomy,
   Testimonials,
   CreateBeautifulApps,
   FeaturesOne,
-  FeaturesTwo,
-  FAQ,
-  FinalCTA,
-  Footer 
-} from "@/components/sections"
+  FinalCTA
+} from "@/app/home-pt"
 
 export default function Home() {
   return (
     <>
       <Header />
-      <SmoothScroll className="min-h-screen" style={{ backgroundColor: '#F6F4F1' }}>
-        <main>
-          <Hero />
-          <CodingAssistants />
-          <TaskAnatomy />
-          <Testimonials />
-          <CreateBeautifulApps />
-          <FeaturesOne />
-          <FeaturesTwo />
-          <FAQ />
-          <FinalCTA />
-        </main>
-        <Footer />
-      </SmoothScroll>
+      <div className="min-h-screen" style={{ backgroundColor: '#F6F4F1' }}>
+        <SmoothScroll>
+          <main>
+            <Hero />
+            <CodingAssistants />
+            <TaskAnatomy />
+            <Testimonials />
+            <CreateBeautifulApps />
+            <FeaturesOne />
+            <FinalCTA />
+          </main>
+          <Footer />
+        </SmoothScroll>
+      </div>
     </>
   );
 }

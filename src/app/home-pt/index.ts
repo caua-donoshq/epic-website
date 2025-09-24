@@ -1,0 +1,8 @@
+export { Hero } from './1.hero'
+export { CodingAssistants } from './2.coding-assistants'
+export { TaskAnatomy } from './3.task-anatomy'
+export { Testimonials } from './testimonials'
+export { CreateBeautifulApps } from './4.create-beautiful-apps'
+export { FeaturesOne } from './5.features-one'
+export { FAQ } from './faq'
+export { FinalCTA } from './final-cta'

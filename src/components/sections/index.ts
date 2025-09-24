@@ -1,13 +1,2 @@
 export { Header } from './00-header'
-export { Hero } from './01-hero'
-export { CodingAssistants } from './02-coding-assistants'
-export { TaskAnatomy } from './03-task-anatomy'
-export { Testimonials } from './testimonials'
-// Hidden components moved to ./hidden/ folder
-export { FeaturesOne } from './04-features-one'
-export { FeaturesTwo } from './05-features-two'
-export { CreateBeautifulApps } from './create-beautiful-apps'
-// export { VibeCodeConfidence } from './07-vibecode-confidence'
-export { FAQ } from './08-faq'
-export { FinalCTA } from './final-cta'
 export { Footer } from './footer'
