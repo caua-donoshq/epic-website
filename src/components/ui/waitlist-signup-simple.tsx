@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { supabase } from "@/lib/supabase"
+// import { supabase } from "@/lib/supabase"
 
 export function WaitlistSignupSimple() {
   const [email, setEmail] = useState("")
@@ -21,13 +21,13 @@ export function WaitlistSignupSimple() {
     }, 300) // Small delay just for the loading animation
 
     // Insert email in the background
-    supabase
-      .from('waitlist')
-      .insert([{ email }])
-      .then(() => {
-        // Silently handle all errors since we already showed success
-        // This includes duplicate emails (23505) and any other errors
-      })
+    // supabase
+    //   .from('waitlist')
+    //   .insert([{ email }])
+    //   .then(() => {
+    //     // Silently handle all errors since we already showed success
+    //     // This includes duplicate emails (23505) and any other errors
+    //   })
   }
 
   if (isSubmitted) {

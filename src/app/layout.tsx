@@ -5,9 +5,34 @@ import '@fontsource/inter-tight/500.css';
 import '@fontsource/inter-tight/600.css';
 import '@fontsource/inter-tight/700.css';
 import { ConsoleEasterEgg } from '@/components/console-easter-egg';
-import { ThemeProvider } from '@/lib/theme-context';
 import { DynamicFavicon } from '@/components/dynamic-favicon';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { EB_Garamond, DM_Sans, Inter, Instrument_Serif } from 'next/font/google';
+
+const ebGaramond = EB_Garamond({
+  subsets: ['latin'],
+  variable: '--font-eb-garamond',
+  display: 'swap',
+});
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const instrumentSerif = Instrument_Serif({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-instrument-serif',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: "Epic - AI Product Manager for AI Coding Assistants",
@@ -46,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${ebGaramond.variable} ${dmSans.variable} ${inter.variable} ${instrumentSerif.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
         
@@ -57,23 +82,15 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-icon.svg" />
         <link rel="mask-icon" href="/images/favicon-black.svg" color="#000000" />
         
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
       </head>
       <body
         className="antialiased font-sans light"
         suppressHydrationWarning={true}
       >
-        <ThemeProvider
-          defaultTheme="light"
-          storageKey="epic-theme"
-        >
-          <DynamicFavicon />
-          {children}
-          <ConsoleEasterEgg />
-          <SpeedInsights />
-        </ThemeProvider>
+        <DynamicFavicon />
+        {children}
+        <ConsoleEasterEgg />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Plus, Minus } from "phosphor-react"
+import { Plus, Minus } from "lucide-react"
 import { FadeIn } from "@/components/animations"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 
@@ -126,9 +126,9 @@ export function FAQ() {
                     </h3>
                     <div className="flex-shrink-0 transition-transform duration-200">
                       {openItems.includes(index) ? (
-                        <Minus size={20} weight="regular" className="text-gray-600" />
+                        <Minus size={20} className="text-gray-600" />
                       ) : (
-                        <Plus size={20} weight="regular" className="text-gray-600" />
+                        <Plus size={20} className="text-gray-600" />
                       )}
                     </div>
                   </CollapsibleTrigger>

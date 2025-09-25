@@ -1,11 +1,10 @@
 import { SmoothScroll } from "@/components/animations"
-import { Header, Footer } from "@/components/sections"
+import { Header, Footer } from "@/components"
 import {
   Hero,
-  CodingAssistants,
+  PRDSection,
   TaskAnatomy,
   Testimonials,
-  CreateBeautifulApps,
   FeaturesOne,
   FinalCTA
 } from "@/app/home-pt"
@@ -18,10 +17,9 @@ export default function Home() {
         <SmoothScroll>
           <main>
             <Hero />
-            <CodingAssistants />
+            <PRDSection />
             <TaskAnatomy />
             <Testimonials />
-            <CreateBeautifulApps />
             <FeaturesOne />
             <FinalCTA />
           </main>

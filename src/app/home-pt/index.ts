@@ -1,4 +1,5 @@
 export { Hero } from './1.hero'
+export { PRDSection } from './2.prd-section'
 export { CodingAssistants } from './2.coding-assistants'
 export { TaskAnatomy } from './3.task-anatomy'
 export { Testimonials } from './testimonials'

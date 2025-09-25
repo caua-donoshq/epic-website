@@ -84,12 +84,17 @@
   --popover: #111111;
   --popover-foreground: #F7F8F8;
   --ring: #FF6B35;
+
+  --font-eb-garamond: var(--font-eb-garamond);
+  --font-dm-sans: var(--font-dm-sans);
+  --font-inter: var(--font-inter);
+  --font-instrument-serif: var(--font-instrument-serif);
 }
 
 body {
   background-color: #F6F4F1 !important;
   color: #09090b !important;
-  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-dm-sans), system-ui, -apple-system, sans-serif;
   font-size: 15px;
   font-weight: 510;
   line-height: 24px;
