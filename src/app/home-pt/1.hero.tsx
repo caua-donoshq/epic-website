@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import { Eyebrow } from "@/components/ui/eyebrow"
 
 export function Hero() {
   return (
@@ -17,10 +18,15 @@ export function Hero() {
           />
         </div>
       </div>
-      
+
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 pt-20 pb-20">
+        {/* Beta Eyebrow */}
+        <div className="mb-4 mt-20">
+          <Eyebrow>Estamos em Versão Beta</Eyebrow>
+        </div>
+
         {/* Main heading */}
-        <h1 className="text-4xl md:text-6xl lg:text-6xl font-normal tracking-tight text-center leading-none md:leading-none lg:leading-none text-black mb-8 max-w-xl mt-20" style={{ fontFamily: "'EB Garamond', serif" }}>
+        <h1 className="text-4xl md:text-6xl lg:text-6xl font-normal tracking-tight text-center leading-none md:leading-none lg:leading-none text-black mb-8 max-w-xl" style={{ fontFamily: "'EB Garamond', serif" }}>
           Chega de implorar para o Lovable te obedecer
         </h1>
         

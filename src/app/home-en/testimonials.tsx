@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-const quote = '"It\'s like vibe coding with a senior developer by your side"';
+const quote = '"It\'s like building your app with a tech lead by your side"';
 
 export function Testimonials() {
   const containerRef = useRef<HTMLDivElement>(null);

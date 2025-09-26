@@ -1,21 +1,21 @@
 "use client"
 
 import { useState } from "react"
-import { Plus, Minus } from "phosphor-react"
+import { Plus, Minus } from "lucide-react"
 import { FadeIn } from "@/components/animations"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 
 const faqs = [
   {
     question: "I'm not an engineer. Will Epic work for me?",
-    answer: "Absolutely! Epic is designed with AI-first development in mind. You don't need to be a coding expert – just describe what you want to build in plain English. Our boilerplate handles the complex technical setup, while you focus on your vision. The AI coding assistants understand natural language and can transform your ideas into working applications. Think of it as having a senior developer partner who speaks your language."
+    answer: "Absolutely! Epic was designed with AI-first development in mind. You don't need to be a coding expert – just describe what you want to build in plain English. Our boilerplate handles the complex technical setup, while you focus on your vision. AI coding assistants understand natural language and can transform your ideas into functional applications. Think of it as having a senior developer partner who speaks your language."
   },
   {
-    question: "Which built-in features can I expect from Epic's boilerplate?",
-    answer: "Epic comes batteries-included with everything modern applications need: user authentication (sign up, sign in, password reset), database integration with PostgreSQL, beautiful UI components via shadcn/ui, dark mode support, responsive design, form handling with validation, API routes and server actions, file uploads, email sending capabilities, payment processing setup, SEO optimization, and production-ready deployment configs. Plus, our automated documentation system ensures every feature is well-documented for your AI assistant to leverage."
+    question: "What built-in features can I expect from Epic's boilerplate?",
+    answer: "Epic comes complete with everything modern applications need: user authentication (signup, login, password recovery), PostgreSQL database integration, beautiful UI components via shadcn/ui, dark mode support, responsive design, form handling with validation, API routes and server actions, file uploads, email sending capabilities, payment processing setup, SEO optimization, and production-ready deployment configurations. Additionally, our automated documentation system ensures every feature is well-documented for your AI assistant to leverage."
   },
   {
-    question: "What is Epic's tech stack?",
+    question: "What is Epic's technology stack?",
     answer: {
       sections: [
         {
@@ -36,15 +36,15 @@ const faqs = [
         {
           title: "Backend (Next.js Full-Stack)",
           items: [
-            { label: "Runtime", value: "Node.js 20+ (Edge Runtime where beneficial)" },
+            { label: "Runtime", value: "Node.js 20+ (Edge Runtime when beneficial)" },
             { label: "API", value: "Server Actions (primary), Route Handlers (when needed)" },
             { label: "Database", value: "PostgreSQL via Supabase" },
             { label: "ORM", value: "Drizzle ORM" },
-            { label: "Authentication", value: "Supabase Auth (for auth only)" },
+            { label: "Authentication", value: "Supabase Auth (auth only)" },
             { label: "Session Management", value: "Provider-managed sessions (no app-issued JWTs)" },
             { label: "Validation", value: "Zod schemas" },
             { label: "Sanitization", value: "isomorphic-dompurify for HTML sanitization" },
-            { label: "Security", value: "server-only package for preventing client imports" },
+            { label: "Security", value: "server-only package to prevent client imports" },
             { label: "Real-time", value: "Server-Sent Events for streaming" },
             { label: "File Upload", value: "Server Actions + Supabase Storage" },
             { label: "Testing", value: "Vitest for unit/integration + Testcontainers for DB isolation" }
@@ -53,12 +53,12 @@ const faqs = [
         {
           title: "Infrastructure",
           items: [
-            { label: "Hosting", value: "Vercel (optimal for Next.js)" },
+            { label: "Hosting", value: "Vercel (ideal for Next.js)" },
             { label: "Database", value: "Supabase PostgreSQL" },
             { label: "Authentication", value: "Supabase Auth" },
             { label: "File Storage", value: "Supabase Storage" },
             { label: "Email", value: "Resend via Server Actions" },
-            { label: "Payments", value: "Stripe via Server Actions" },
+            { label: "Pagamentos", value: "Stripe via Server Actions" },
             { label: "Monitoring", value: "Vercel Analytics + Sentry" },
             { label: "CDN", value: "Vercel Edge Network" }
           ]
@@ -126,9 +126,9 @@ export function FAQ() {
                     </h3>
                     <div className="flex-shrink-0 transition-transform duration-200">
                       {openItems.includes(index) ? (
-                        <Minus size={20} weight="regular" className="text-gray-600" />
+                        <Minus size={20} className="text-gray-600" />
                       ) : (
-                        <Plus size={20} weight="regular" className="text-gray-600" />
+                        <Plus size={20} className="text-gray-600" />
                       )}
                     </div>
                   </CollapsibleTrigger>

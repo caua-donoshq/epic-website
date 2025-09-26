@@ -8,10 +8,10 @@ export function CreateBeautifulApps() {
         {/* Create Beautiful Apps */}
         <div className="mb-16 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-6xl font-normal leading-tight tracking-tight text-black mb-6" style={{ fontFamily: "'EB Garamond', serif" }}>
-            Create Beautiful Apps
+            Apps that don't look AI-generated
           </h1>
           <p className="text-center max-w-3xl text-base font-normal leading-relaxed text-black mb-8 mx-auto">
-            Epic keeps one central style file for all your brand colors, fonts, and components and helps you setup your brand identity from the start. No more generic UIs.
+            Epic maintains a central style file for all your brand's colors, fonts and components and helps you set up your visual identity from the start. No more generic interfaces.
           </p>
         </div>
         

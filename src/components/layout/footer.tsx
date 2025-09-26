@@ -3,7 +3,18 @@ import Link from 'next/link'
 export function Footer() {
   return (
     <footer className="text-center py-8" style={{ backgroundColor: '#F6F4F0' }}>
-      <p className="text-gray-600 dark:text-gray-400">A product by Donos ©</p>
+      <p className="text-gray-600 dark:text-gray-400">
+        A product by{' '}
+        <Link
+          href="https://donoshq.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-orange-500 transition-colors"
+        >
+          Donos
+        </Link>{' '}
+        ©
+      </p>
       <div className="mt-4 space-x-4">
         <Link
           href="/privacy-policy"

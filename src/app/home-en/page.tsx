@@ -8,9 +8,9 @@ import {
   FeaturesOne,
   ProjectManagement,
   FinalCTA
-} from "@/app/home-pt"
+} from "@/app/home-en"
 
-export default function Home() {
+export default function HomeEn() {
   return (
     <>
       <Header />

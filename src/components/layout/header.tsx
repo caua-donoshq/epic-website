@@ -3,9 +3,12 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
+import { LanguageSelector } from "@/components/ui/language-selector"
 
 export function Header() {
   const [hasScrolled, setHasScrolled] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,18 +39,22 @@ export function Header() {
               />
             </Link>
             
-            {/* Get Early Access Button */}
-            <button
-              onClick={() => {
-                const heroSection = document.getElementById('hero')
-                if (heroSection) {
-                  heroSection.scrollIntoView({ behavior: 'smooth' })
-                }
-              }}
-              className="px-4 py-2 bg-black text-white text-sm font-medium rounded-full hover:bg-orange-500 transition-colors"
-            >
-              Get early access
-            </button>
+            {/* Right side - Language Selector and Button */}
+            <div className="flex items-center gap-4">
+              <LanguageSelector currentPath={pathname} />
+
+              <button
+                onClick={() => {
+                  const heroSection = document.getElementById('hero')
+                  if (heroSection) {
+                    heroSection.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
+                className="hidden sm:block px-4 py-2 bg-black text-white text-sm font-medium rounded-full hover:bg-orange-500 transition-colors"
+              >
+                {pathname === '/home-en' ? 'Try it for free' : 'Teste gratuitamente'}
+              </button>
+            </div>
           </div>
         </div>
       </div>
