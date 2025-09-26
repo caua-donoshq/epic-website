@@ -16,7 +16,7 @@ export function TaskAnatomy() {
         <div className="flex items-center justify-center mt-16">
           <div className="relative w-full max-w-5xl">
             <Image
-              src="/images/task-anatomy.svg"
+              src="/images/task-anatomy-EN.svg"
               alt="Task anatomy visualization"
               width={1200}
               height={600}
